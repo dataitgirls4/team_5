@@ -11,5 +11,5 @@
 
 ## 현재 작업물
 ### API
-(임시로 제안) API-endpoint이름-구단이름.py  
-* api-players-geng.py
+(임시 제안) API-endpoint이름-구단이름-선수이름.py  
+* api-players-geng-pio.py
