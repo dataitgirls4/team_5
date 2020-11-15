@@ -3,7 +3,9 @@
 
 ## 규칙
 
-### branch 관련
+### 브랜치 branch (수정중)
+GitHub-flow 를 응용해보자.
+http://scottchacon.com/2011/08/31/github-flow.html
 
 ### 파일명 관련
 * 소문자 영어 / 언더바(_)말고 하이픈 (-)
