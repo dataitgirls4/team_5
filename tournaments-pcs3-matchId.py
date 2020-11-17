@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-api_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNzQ0NmFmMC0wYWU2LTAxMzktNDU5NC0yN2RlMjM2NjU0MzgiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjA1NjA1OTQzLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImE2MGZkY2MxLTM0OWEtNDczZi1hYzQ4LWI3NjhiNjY4ODhjMCJ9.jheRXq7t_XHbIpnE1NZGTCgKVWLfZVbCY_6WcTDuK5A"
+api_key = "본인 API Key"
 
 header = {
   "Authorization": api_key,
