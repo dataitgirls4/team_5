@@ -1,7 +1,7 @@
 ## 데잇걸즈 5조
 김귀선, 김소이, 김해인, 김희지, 박유빈
 
-### Code
+> ### Code
 **브랜치 branch**  
 GitHub-flow를 응용해보자.(수정중)  
 http://scottchacon.com/2011/08/31/github-flow.html  
@@ -13,7 +13,7 @@ http://scottchacon.com/2011/08/31/github-flow.html
   예시: players-geng-pio.py  
 * 커밋메시지 맨 앞, "#이슈번호" 넣기.
 
-### Issues
+> ### Issues
 **머리말**  
 [데이터추출] / [데이터가공] / [ERD] / [분석]
 
