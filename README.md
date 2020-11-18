@@ -2,6 +2,10 @@
 김귀선, 김소이, 김해인, 김희지, 박유빈
 
 > ### Code
+**업로드 시 주의사항**
+* 깃헙이 익숙하지 않다면 새로운 작업물은 직접 올리는 게 안전
+* 기존 작업물을 수정하는 경우, pull_requests_manual.md 참고
+
 **브랜치 branch**  
 GitHub-flow를 응용해보자.(수정중)  
 http://scottchacon.com/2011/08/31/github-flow.html  
