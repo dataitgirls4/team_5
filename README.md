@@ -4,17 +4,13 @@
 > ### Code
 **업로드 시 주의사항**
 * 깃헙이 익숙하지 않다면 새로운 작업물은 직접 올리는 게 안전
-* 기존 작업물을 수정하는 경우, pull_requests_manual.md 참고
+* 기존 작업물을 수정하는 경우, [pull_requests_manual.md](pull_requests_manual.md) 참고
 
-**브랜치 branch**  
+**브랜치**  
 GitHub-flow를 응용해보자.(수정중)  
 http://scottchacon.com/2011/08/31/github-flow.html  
 
-**파일명**  
-* 소문자 영어 / 언더바(_)말고 하이픈 (-)  
-* 같은 작업을 할 때는 메인 브랜치의 파일명과 동일하게, 대신 브랜치를 생성해서 작업하기  
-* endpoint-구단/선수명-결과물.py  
-  예시: players-geng-pio.py  
+**파일명**    
 * 커밋메시지 맨 앞, "#이슈번호" 넣기.
 
 > ### Issues
