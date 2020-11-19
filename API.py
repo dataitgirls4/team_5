@@ -1,49 +1,18 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[10]:
-
-
 import requests
+import pandas as pd
 
-url = "https://api.pubg.com/shards/kakao/players?filter[playerNames]=de_javu_" 
+# point 1 본인 API KEY
+api_key = "본인 API Key"
 
 header = {
-  "Authorization": "Personal_API",
+  "Authorization": api_key,
   "Accept": "application/vnd.api+json"
 }
 
-r = requests.get(url, headers=header)
-
-
-# In[11]:
-
-
-r.text
-
-
-# In[12]:
-
-
-url =  "https://api.pubg.com/shards/kakao/matches/24a26a10-ae7f-4cba-a717-f2b00465393e" 
-header = {
-  "Authorization": "Personal_API",
-  "Accept": "application/vnd.api+json"
-}
+# point 2 URL 파라미터 변경
+url = "https://api.pubg.com/shards/tournaments/{match_id}" 
 
 r = requests.get(url, headers=header)
-json=r.json()
-#df=pd.DataFrame(json)
 
-
-# In[13]:
-
-
-json
-
-
-# In[ ]:
-
-
-
-
+# point 3 변수명 지정
+변수명_지정 = r.json()
