@@ -11,7 +11,7 @@ from chicken_dinner.pubgapi import PUBG
 from chicken_dinner.pubgapi import PUBGCore
 
 # needed variables
-api_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyZTUxN2M3MC0wNzhkLTAxMzktNjA3My0xM2VlZDFhM2VmZGQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjA1MjM3NjYyLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImRhdGFpdGdpcmxzIn0.TKzOoZ4svDG-sGFbMGv-uCV51jFsPAvSO0oU3nvgve4"
+api_key = "personalAPI"
 
 # PUBG / PUBGCore class를 토너먼트용 class로 custom!
 PUBG = PUBG(api_key=api_key, shard='pc-tournament', gzip=True)
@@ -50,7 +50,6 @@ telemetry_link = []
 # SECOND TABLE
 # match_participant
 player_id = []
-join_id = [] # participant / stat 테이블 조인을 위한 것.
 team_roster_id = []
 team_id = []
 team_rank = []
@@ -79,7 +78,6 @@ for i in pcs3_matchId_df['matchId'] :
       participant = roster_participant[i]
       match_id_2.append(match.id)
       player_id.append(participant.name)
-      join_id.append(participant.id)
       team_roster_id.append(roster.id)
       team_rank.append(roster.stats['rank'])
       team_id.append(roster.stats['team_id'])
@@ -88,7 +86,7 @@ for i in pcs3_matchId_df['matchId'] :
       participant_stats.append(stats)
 
 # MAKE DATAFRAME USING LISTS
-match_info = pd.DataFrame({ 'match_id': match_id, 'created_at': created_at, 'map_name' : map_id, 'duration': duration, 'telemetry_link': telemetry_link})
+match_info = pd.DataFrame({ 'match_id': match_id, 'created_at': created_at, 'map_name' : map_name, 'duration': duration, 'telemetry_link': telemetry_link})
 match_participant = pd.DataFrame({'match_id': match_id_2, 'player_id': player_id, 'team_roster_id': team_roster_id, 'team_id': team_id, 'team_rank': team_rank})
 match_participant_stats = pd.DataFrame(participant_stats).drop(columns='player_id')
 #인덱스 기준으로 join
