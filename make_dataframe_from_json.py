@@ -11,7 +11,7 @@ from chicken_dinner.pubgapi import PUBG
 from chicken_dinner.pubgapi import PUBGCore
 
 # needed variables
-api_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyZTUxN2M3MC0wNzhkLTAxMzktNjA3My0xM2VlZDFhM2VmZGQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjA1MjM3NjYyLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImRhdGFpdGdpcmxzIn0.TKzOoZ4svDG-sGFbMGv-uCV51jFsPAvSO0oU3nvgve4"
+api_key = "Personal API"
 
 # PUBG / PUBGCore class를 토너먼트용 class로 custom!
 PUBG = PUBG(api_key=api_key, shard='pc-tournament', gzip=True)
@@ -93,13 +93,13 @@ match_participant = pd.DataFrame({'player_name': player_name, 'player_won': play
 match_participant_stats = pd.DataFrame(participant_stats, index= match_id_2)
 
 # check the Dataframe
-match_info.to_excel('/Users/kimheeji/Documents/데잇걸즈/gamedata/sample_excel')
+match_info
 match_participant
 match_participant_stats
 
 # excel_export
 import os
-base_dir = "/Users/kimheeji/Documents/데잇걸즈/gamedata/"
+base_dir = "Personal Directory"
 file_nm = "sampledf.xlsx"
 xlxs_dir = os.path.join(base_dir, file_nm)
 with pd.ExcelWriter(xlxs_dir) as writer:
