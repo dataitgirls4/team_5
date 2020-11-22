@@ -4,14 +4,14 @@ import pprint as pp
 import requests
 import pandas as pd
 #installation chicken-dinner module
-pip install chicken-dinner
+# pip install chicken-dinner
 #import chicken-dinner class
 from chicken_dinner.models.tournament import Tournament
 from chicken_dinner.pubgapi import PUBG
 from chicken_dinner.pubgapi import PUBGCore
 
 # needed variables
-api_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyZTUxN2M3MC0wNzhkLTAxMzktNjA3My0xM2VlZDFhM2VmZGQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjA1MjM3NjYyLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImRhdGFpdGdpcmxzIn0.TKzOoZ4svDG-sGFbMGv-uCV51jFsPAvSO0oU3nvgve4"
+api_key = "personalAPI"
 
 # PUBG / PUBGCore class를 토너먼트용 class로 custom!
 PUBG = PUBG(api_key=api_key, shard='pc-tournament', gzip=True)
@@ -40,24 +40,19 @@ pcs3_matchId_df
 ########################
 
 ## NEEDED LIST
+# FIRST TABLE
 # match_info
 match_id = []
 created_at = []
-# map_name과 중복 삭제
-# duration 추가
-map_id = []
 map_name = []
+duration = []
 telemetry_link = []
+# SECOND TABLE
 # match_participant
-# player_name은 언더바 뒤만 포함. player_id로 변경
-player_name = []
-# 삭제하고 winPlace로 불러오기.
-player_won = []
+player_id = []
 team_roster_id = []
-team_rank = []
 team_id = []
-# 삭제
-team_won = []
+team_rank = []
 match_id_2 = []
 # match_participant_stats
 participant_stats = []
@@ -66,48 +61,43 @@ participant_stats = []
 # for i in matchid_list :
 for i in pcs3_matchId_df['matchId'] :
   # match_info
-  # match_id, created_at, map_id, map_name, telemetry_link
+  # match_id, created_at, map_name, duration, telemetry_link
   match = PUBG.match(i)
   match_id.append(match.id)
   created_at.append(match.created_at)
-  map_id.append(match.map_id)
   map_name.append(match.map_name)
+  duration.append(match.duration)
   telemetry_link.append(match.telemetry_url)
   # match_participant
-  # match_id, player_name, player_id, roster_id, roster_rank, team_id, won, participant_won
+  # match_id, player_id, team_roster_id, team_rank, team_id
   rosters = match.rosters
   for i in range(len(rosters)):
     roster = rosters[i]
     roster_participant = roster.participants
-    for i in range(0,4):
+    for i in range(len(roster_participant)):
       participant = roster_participant[i]
-      player_name.append(participant.name)
-      player_won.append(participant.won)
-      team_roster_id.append(roster_participant[i].id)
+      match_id_2.append(match.id)
+      player_id.append(participant.name)
+      team_roster_id.append(roster.id)
       team_rank.append(roster.stats['rank'])
       team_id.append(roster.stats['team_id'])
-      team_won.append(roster.stats['won'])
-      match_id_2.append(match.id)
-      stats = participant.stats
       # match_participant_stats
+      stats = participant.stats
       participant_stats.append(stats)
 
 # MAKE DATAFRAME USING LISTS
-match_info = pd.DataFrame({ 'created_at': created_at, 'map_id': map_id, 'map_name' : map_id, 'telemetry_link': telemetry_link}, index=match_id)
-match_participant = pd.DataFrame({'player_name': player_name, 'player_won': player_won, 'team_roster_id': team_roster_id, 'team_id': team_id, 'team_rank': team_rank, 'team_won': team_won}, index=match_id_2)
-match_participant_stats = pd.DataFrame(participant_stats, index= match_id_2)
+match_info = pd.DataFrame({ 'match_id': match_id, 'created_at': created_at, 'map_name' : map_name, 'duration': duration, 'telemetry_link': telemetry_link})
+match_participant = pd.DataFrame({'match_id': match_id_2, 'player_id': player_id, 'team_roster_id': team_roster_id, 'team_id': team_id, 'team_rank': team_rank})
+match_participant_stats = pd.DataFrame(participant_stats).drop(columns='player_id')
+#인덱스 기준으로 join
+match_participant_all = pd.merge(match_participant, match_participant_stats, how='inner', left_index=True, right_index=True) 
+
 
 # check the Dataframe
 match_info
-match_participant
-match_participant_stats
+match_participant_all
 
-# excel_export
-import os
-base_dir = "Personal Directory"
-file_nm = "sampledf.xlsx"
-xlxs_dir = os.path.join(base_dir, file_nm)
-with pd.ExcelWriter(xlxs_dir) as writer:
-    match_info.to_excel(writer, sheet_name = 'match_info')
-    match_participant.to_excel(writer, sheet_name = 'match_participant')
-    match_participant_stats.to_excel(writer, sheet_name= 'match_participant_stats') 
+
+#export csv
+match_info.to_csv("/Users/kimheeji/Documents/데잇걸즈/gamedata/dataframe_output/pcs3_match_info.csv")
+match_participant_all.to_csv("/Users/kimheeji/Documents/데잇걸즈/gamedata/dataframe_output/pcs3_match_participants.csv")
