@@ -11,7 +11,7 @@ from chicken_dinner.pubgapi import PUBG
 from chicken_dinner.pubgapi import PUBGCore
 
 # needed variables
-api_key = "Personal API"
+api_key = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyZTUxN2M3MC0wNzhkLTAxMzktNjA3My0xM2VlZDFhM2VmZGQiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNjA1MjM3NjYyLCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6ImRhdGFpdGdpcmxzIn0.TKzOoZ4svDG-sGFbMGv-uCV51jFsPAvSO0oU3nvgve4"
 
 # PUBG / PUBGCore class를 토너먼트용 class로 custom!
 PUBG = PUBG(api_key=api_key, shard='pc-tournament', gzip=True)
@@ -43,15 +43,20 @@ pcs3_matchId_df
 # match_info
 match_id = []
 created_at = []
+# map_name과 중복 삭제
+# duration 추가
 map_id = []
 map_name = []
 telemetry_link = []
 # match_participant
+# player_name은 언더바 뒤만 포함. player_id로 변경
 player_name = []
+# 삭제하고 winPlace로 불러오기.
 player_won = []
 team_roster_id = []
 team_rank = []
 team_id = []
+# 삭제
 team_won = []
 match_id_2 = []
 # match_participant_stats
