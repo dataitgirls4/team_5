@@ -13,7 +13,7 @@ id = pd.read_csv("tournaments_list.csv")
 id = id['tournament_id']
 id
 # ''안에 아이디 하나씩 넣기
-id_tor = 'as-pcs3as'
+id_tor = 'tournament_id'
 
 # 괄호에 아이디 하나씩 넣기 *22
 tor = PUBG.tournament(id_tor)
@@ -79,19 +79,18 @@ match_participant_stats = match_participant_stats.rename(columns={'name':'player
 match_participant_all = pd.merge(match_participant, match_participant_stats, how='inner', left_index=True, right_index=True)
 match_participant_all = match_participant_all.rename(columns={'player_id_x': 'player_id'})
 
+
 #[최종]match_info
 match_info = pd.DataFrame({'match_id': match_id, 'created_at': created_at, 'map_name' : map_name, 'duration': duration, 'telemetry_link': telemetry_link})
 match_toprank = match_participant_all.query('team_rank == 1')
-match_toprank_list = match_toprank[['match_id', 'team_name']].rename(columns={'team_name':'winner'})
+match_toprank_list = match_toprank[['match_id', 'team_name']].rename(columns={'team_name':'winner'}).drop_duplicates(keep='first')
 match_info = pd.merge(match_info, match_toprank_list, how = 'left', on = 'match_id')
 tournament_id = pd.DataFrame({'tournament_id': [id_tor for i in range(len(match_info))]})
 match_info = pd.merge(match_info, tournament_id, how = "left", left_index=True, right_index=True)
-match_info = match_info[['tournament_id', 'match_id', 'created_at', 'map_name', 'duration', 'winner', 'telemetry_link', 'winner']]
-
+match_info = match_info[['tournament_id', 'match_id', 'created_at', 'map_name', 'duration', 'winner', 'telemetry_link', 'winner']].drop_duplicates(keep='first')
 
 #[최종]match_participant_all
 tournament_id = pd.DataFrame({'tournament_id': [id_tor for i in range(len(match_participant_all))]})
-
 match_participant_all = pd.merge(match_participant_all, tournament_id, how = "left", left_index=True, right_index=True)
 match_participant_all = match_participant_all[['tournament_id','match_id', 'team_name', 'team_rank', 'player_id', 'player_name', 'kill_place', 'kills', 'dbnos', 'assists', 'damage_dealt', 'longest_kill', 'headshot_kills', 'road_kills','vehicle_destroys',  'boosts',  'death_type',  'heals',  'revives', 'ride_distance', 'walk_distance', 'swim_distance',  'weapons_acquired', 'team_kills', 'kill_streaks']]
 
@@ -104,7 +103,7 @@ from sqlalchemy import create_engine
 pymysql.install_as_MySQLdb()
 import MySQLdb
 
-engine = create_engine("PERSONAL DB INFO", encoding='utf-8')
+engine = create_engine('Personal_db_info', encoding='utf-8')
 conn = engine.connect()
 
 # MySQL에 저장하기
@@ -115,4 +114,3 @@ table_name_2 = f"{tournament_id}_matches_stats"
 
 match_info.to_sql(name=table_name_1, con=engine, if_exists='append', index=False)
 match_participant_all.to_sql(name=table_name_2, con=engine, if_exists='append', index=False)
-
