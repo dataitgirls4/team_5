@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Intro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="style.css">
+    <style>
+       
+        body{
+          
+            overflow-x: hidden;
+            margin:0;
+            padding:0;   
+        }
+        /* 타이틀 헤더 */
+        section.titleWrap{
+            position: fixed;
+            height: 800px;
+            width:100%;
+            top:0;
+            left:0;
+        }
+        h1{
+            position: absolute;
+            color:#eee;
+            text-align:center;
+            padding-top:320px;
+            width: 100%;
+            font-size: 100px;
+            z-index: 1;
+
+        }
+        .cover{
+            position: fixed;
+            width: 100%;
+            height: 800px;
+            background-color: rgba(0,0,0,1);
+        }
+        .coverImg{
+            position: fixed;
+            width: 100%;
+            height: 800px;
+            background:url(img/ba.jpg) center center / cover no-repeat;
+        }
+
+        /* 본문영역 */
+        section.textWrap{
+            position: relative;
+            width: 100%;
+            margin-top: 800px;
+            padding-top:100px;
+            background-color: #fff;
+            z-index: 1;
+        }
+        .innerWrap{
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+
+        p{
+            color :#111;
+            font-size : 15px; 
+            line-height: 28px;
+            margin-bottom:  80px;
+        }
+        * {
+            box-sizing: border-box;
+            }
+            /* Style the header */
+        .header {
+                background-color: #f1f1f1;
+                padding: 20px;
+                text-align: center;
+        }
+        .topnav {
+                overflow: hidden;
+                background-color: #333;
+                z-index: 100;
+                position: relative;
+         }
+         .topnav a {
+                
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                z-index: 100;
+        }
+        .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+                z-index: 100;
+        }
+        li {display: inline;}
+        img { display: block; margin: 0px auto; }
+        h3,div,p{
+            text-align:center;
+        }
+
+
+    </style>
+    <script>
+        let scrollTop =0;
+        let h1;
+        let coverImg;
+        let cover;
+        let bar;
+        let panWrap;
+
+        window.onload =function(){
+            h1= document.getElementsByTagName("h1")[0];
+
+            coverImg= document.getElementsByClassName("coverImg")[0];
+            cover= document.getElementsByClassName("cover")[0];
+            cover.style.opacity = .3;
+
+            // bar= document.getElementsByClassName("bar")[0];
+            // panWrap = document.getElementsByClassName("panWrap")[0];
+        }
+
+        window.addEventListener("scroll",function(e){
+            scrollTop =document.documentElement.scrollTop;
+            h1.style.transform = "translate(0,"+ -scrollTop/10 +"px)";
+        
+            // let per =Math.ceil(scrollTop / (document.body.scrollHeight - window.outerHeight)*100);
+            coverImg.style.transform = "scale("+ (1 + scrollTop/1000) +")";
+        cover.style.opacity = .3 + scrollTop / 1000;
+           
+            //console.log(per);
+            // bar.style.height = per +"%";
+            // panWrap.style.transform = "translate(0, " + scrollTop / 1.2 +"px)";
+        });
+    </script>
+    </head>
+    <body bgcolor="black">
+        
+        <section class="titleWrap">
+            <div class="coverImg"></div>
+            <div class="cover"> </div>
+            <div class="topnav">
+              <a href="index.html">Lab</a>
+              <a href="intro.html">Intro</a>
+              <a href="mian.html">Main</a>
+              <a href="page2.html">Weapon</a>
+              <a href="page3.html">Map</a>
+              <a href="About5.html">Members</a>
+              </div>
+            <h1>게임 소개</h1>
+            
+
+          </section>
+
+          <section class="textWrap">
+            <div class="innerWrap">
+              
+             <p><h3>배틀 그라운드의 룰 : #100명 #맨 몸 #랜덤 무기 줍기 #자기장 #끝까지 생존</h3><br>
+             <div>룰은 아주 간단합니다.<br><br></div>
+             <img src="img/맨 몸으로 낙하.gif" alt=""><br>
+             <div>네 명이 한 팀이 되어 맨 몸으로 섬에 떨어집니다.<br><br></div>
+             <img src="img/총을 줍는 모습2.gif" alt=""><br>
+             <div>이곳저곳 돌아다니며 무기를 획득하고<br><br></div>
+             <img src="img/총이 없어.gif" alt=""><br>
+             <div>상대팀을 kill 하며 마지막까지 살아남으면 승리합니다.<br><br></div>
+             <img src="img/총을 쏘는 모습.gif" alt=""><br>
+             <div>좋은 총이 있다면, 게임 플레이에 유리합니다.<br><br></div> </p>
+            
+             
+              <p><h3>빠르게 무기를 확보하는 것이 중요한 게임</h3></p>
+             <img src="img/자기장.gif" alt=""><br>
+              <p> 보통 한 경기에 100명의 선수들이 참여하는데, <br>
+                시간이 흐를수록 맵이 점점 작아지기 때문에 빠르게 무기를 확보하고 경기에 임하는 것이 중요합니다.<br>
+                 좁아지는 맵 밖에 있다가는 체력이 소진되어 기절할 수도 있거든요.<br><br><br>
+              </p>
+              
+
+
+
+
+
+
+            </div>
+          </section>
+          
+        
+        
+        
+
+    </body>
+    </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>main</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="black">
+    <div class="topnav">
+        <a href="index.html">Lab</a>
+              <a href="intro.html">Intro</a>
+              <a href="mian.html">Main</a>
+              <a href="page2.html">Weapon</a>
+              <a href="page3.html">Map</a>
+              <a href="About5.html">Members</a>
+      </div>
+	<header class="header">
+		<div class="global-width">
+			<h1 class="page-title"><b>프로젝트 과정</b> </h1>
+			<p>
+				우리의 프로젝트에는 데잇걸즈 4기의 과정이 그대로 녹아있습니다. <br>&nbsp;&nbsp;&nbsp;&nbsp;<B>협업</B> 우리팀의 가치,<br>
+                1. 서로 원하는 것과 원하지 않는 것을 솔직하고 투명하게 공유한다.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;2. 아낌없이 칭찬하고 기꺼이 받는다. 겸손하지 말자.<br>
+                3. 빨리 가는 소수에게 의지하지 않고, <b>"다같이 성장"</b>을 추구한다.<br>
+			</p>
+		</div>
+	</header>
+	<section class="scroll-content">
+		<div class="scroll-graphic">
+			<div class="graphic-item"><img class="scene-img" src="img/json.PNG" alt="제이슨 사진"></div>
+			<div class="graphic-item"><img class="scene-img" src="img/data.png" alt="데이터프레임사진"></div>
+			<div class="graphic-item" data-action="birdFlies">
+				<img class="bird" src="images/bird.gif" alt="">
+				<img class="scene-img" src="images/02.png" alt="">
+			</div>
+			<div class="graphic-item"><img class="scene-img" src="img/db2.PNG" alt="erd 사진"></div>
+			<div class="graphic-item"><img class="scene-img" src="img/grip.png" alt="datagrip사진"></div>
+			<div class="graphic-item" data-action="birdFlies2">
+				<img class="bird" src="img/후라이팬.png" alt="뭐넣냐">
+				<img class="scene-img" src="img/ssi.png" alt="">
+			</div>
+			<div class="graphic-item"><img class="scene-img" src="img/hh.PNG" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="img/git.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="img/is.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="img/no.png" alt="노션사진"></div>
+		</div>
+		<div class="scroll-text global-width">
+			<div class="step">
+				<p>
+                    &nbsp;&nbsp;<b><h3>오픈 API를 통해 직접 문을 열고,<br> Pandas를 활용해 추출 및 가공한 데이터</h3></b>
+                    <a href="https://namu.wiki/w/PLAYERUNKNOWN'S%20BATTLEGROUNDS" target="_blank">배틀그라운드</a>게임 데이터는 경기가 진행되는 동안 일어나는 선수들의 모든 행동을 포함합니다. 예컨대 선수들이 게임 내에서 "문을 여는 행위"를 하면, 그 위치, 시간, 대상 등 관련 데이터를 남깁니다. 그렇게 해서 한 매치가 끝나면 약 80만 줄 이상의 로그가 쌓이게 됩니다. 그리고 이것들은 개발자 포탈을 통해 공개되어 있습니다.
+				</p>
+			</div>
+			<div class="step">
+				<p>
+					배틀그라운드 게임 데이터는 경기가 진행되는 동안 일어나는 선수들의 모든 행동을 포함합니다. 예컨대 선수들이 게임 내에서 "문을 여는 행위"를 하면, 그 위치, 시간, 대상 등 관련 데이터를 남깁니다. 그렇게 해서 한 매치가 끝나면 약 80만 줄 이상의 로그가 쌓이게 됩니다. 그리고 이것들은 개발자 포탈을 통해 공개되어 있습니다.
+				</p>
+			</div>
+			<div class="step">
+				<p>
+                    &nbsp;&nbsp;<b><h3>큰 데이터를 여럿이 효율적으로 다루기 위해 구축한 데이터베이스</h3></b>
+                 필요한 데이터만 가공해서 가져왔음에도 불구하고 데이터의 크기가 상당히 크고,<br>
+                  다섯 명의 조원이 함께 사용해야 하는 만큼 데이터베이스의 필요성을 느꼈습니다.<Br>
+                  그래서, 만들었습니다.
+
+				</p>
+			</div>
+			<div class="step">
+				<p>
+                    판다스를 활용해 데이터프레임 형태로 만든 데이터를 <br>MySQL 서버에 임포트하는 식으로 진행되었습니다.<br>
+                    통합 개발 환경(IDE)은 데이터그립(DataGrip)을 활용했고,<br> 최종적인 모습과 ERD입니다.
+				</p>
+			</div>
+			<div class="step">
+				<p>
+                    <b><h3>본격적인 분석을 위해 데이터를 다루는 데 가장 유용했던 SQL</h3></b>
+                    데이터를 추출하고 가공하는 과정에서 판다스가 가장 많이 사용 되었다면, <br>
+                    데이터베이스를 구축한 뒤 분석을 위한 집계 등에는 <br>SQL이 가장 유용하게 사용되었습니다.
+
+
+				</p>
+			</div>
+			<div class="step">
+				<p>
+					<b><h2>Tableau를 이용한 데이터 시각화</h2></b>
+					
+				</p>
+			</div>
+			<div class="step">
+				<p>
+                    <b><h3>웹페이지 JS, CSS, HTML의 응용</h3></b>
+                    5조만의 웹페이지를 제작했습니다
+				</p>
+			</div>
+			<div class="step">
+				<p>
+                   <b><h3>'쓰기 위해' 쓰기 시작해서 '유용한 협업 도구'로 사용한 Git과 GitHub</h3></b>
+                    처음에는 데잇걸즈 과정에서 배운 것을<br> 활용하기 위한 목적으로 사용을 시작했습니다.<Br>
+                    그러나 사용할수록 실제로 매우 효율적인 도구임을 느꼈고, 우리팀의 버전관리, 백업, 협업의 도구로서 매우 유용하게 활용했습니다.<br>
+                    
+				</p>
+			</div>
+			<div class="step">
+				<p>
+					깃헙 이슈는 특히 애용한 기능인데, 이를 통해 작업의 액션플랜 정리, 역할 배분, 코멘트를 통한 관련 사항 저장 등에 유용하게 사용했습니다.
+				</p>
+			</div>
+			<div class="step">
+				<p>
+                    <b><h2>우리팀의 다이어리, 위키, 칸반이 되어준 노션.</h2></b>
+						
+                   
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="normal-content_global-width">
+		<h2>Thanks to</h2>
+		<h3>우리의 멘토님들</h3>
+		<p>데잇걸즈 PM님들과 모든 강사님, 멘토님, 후원해주신 과학기술정보통신부 한국정보화진흥원 </p>
+		<h2>감사합니다</h2>
+		<p>From 김귀선,김소이,김해인,김희지,박유빈</p>
+	</section>
+	<footer class="global-footer">
+		<a href="https://github.com/dataitgirls4/team_5" target="blank">GitHub 바로가기</a>
+	</footer>
+
+	<script src="main.js"></script>
+</body>
+</html>
