@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About5</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="style.css">
+
+
+
+
+    <style>
+       
+        body{
+          
+            overflow-x: hidden;
+            margin:0;
+            padding:0;   
+        }
+        /* 타이틀 헤더 */
+        section.titleWrap{
+            position: fixed;
+            height: 800px;
+            width:100%;
+            top:0;
+            left:0;
+        }
+        h1{
+            position: absolute;
+            color:#eee;
+            text-align:center;
+            padding-top:320px;
+            width: 100%;
+            font-size: 100px;
+            z-index: 1;
+
+        }
+        .cover{
+            position: fixed;
+            width: 100%;
+            height: 800px;
+            background-color: rgba(0,0,0,1);
+        }
+        .coverImg{
+            position: fixed;
+            width: 100%;
+            height: 800px;
+            background:url(img/ba.jpg) center center / cover no-repeat;
+        }
+
+        /* 본문영역 */
+        section.textWrap{
+            position: relative;
+            width: 100%;
+            margin-top: 800px;
+            padding-top:100px;
+            background-color: #fff;
+            z-index: 1;
+        }
+        .innerWrap{
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+
+        p{
+            color :#111;
+            font-size : 15px; 
+            line-height: 28px;
+            margin-bottom:  80px;
+        }
+        * {
+            box-sizing: border-box;
+            }
+            /* Style the header */
+        .header {
+                background-color: #f1f1f1;
+                padding: 20px;
+                text-align: center;
+        }
+        .topnav {
+                overflow: hidden;
+                background-color: #333;
+                z-index: 100;
+                position: relative;
+         }
+         .topnav a {
+                
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                z-index: 100;
+        }
+        .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+                z-index: 100;
+        }
+        li {display: inline;}
+       
+        div#wrapp{
+          text-align: center;
+        }
+
+      
+        
+
+       
+
+    </style>
+    <script>
+        let scrollTop =0;
+        let h1;
+        let coverImg;
+        let cover;
+        let bar;
+        let panWrap;
+
+        window.onload =function(){
+            h1= document.getElementsByTagName("h1")[0];
+
+            coverImg= document.getElementsByClassName("coverImg")[0];
+            cover= document.getElementsByClassName("cover")[0];
+            cover.style.opacity = .3;
+
+            // bar= document.getElementsByClassName("bar")[0];
+            // panWrap = document.getElementsByClassName("panWrap")[0];
+        }
+
+        window.addEventListener("scroll",function(e){
+            scrollTop =document.documentElement.scrollTop;
+            h1.style.transform = "translate(0,"+ -scrollTop/10 +"px)";
+        
+            // let per =Math.ceil(scrollTop / (document.body.scrollHeight - window.outerHeight)*100);
+            coverImg.style.transform = "scale("+ (1 + scrollTop/1000) +")";
+        cover.style.opacity = .3 + scrollTop / 1000;
+           
+            //console.log(per);
+            // bar.style.height = per +"%";
+            // panWrap.style.transform = "translate(0, " + scrollTop / 1.2 +"px)";
+        });
+    </script>
+    </head>
+    <body class="w3-light-grey w3-content"  style="max-width:1600px">
+        <div class="w3-main" style="margin-left:300px"></div>
+        
+        
+        <section class="titleWrap">
+            <div class="coverImg"></div>
+            <div class="cover"> </div>
+            <div class="topnav">
+              <a href="index.html">Lab</a>
+              <a href="intro.html">Intro</a>
+              <a href="mian.html">Analysis process</a>
+              <a href="page2.html">Weapon</a>
+              <a href="page3.html">Map</a>
+              <a href="About5.html">Members</a>
+              </div>
+            <h1><B>연구원들을 소개합니다</B></h1>
+             
+
+          </section>
+          
+
+          <section class="textWrap">
+            <div class="innerWrap">
+                <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="img/ggui.png" alt="사진1" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h3>김귀선</h3>
+      <p>kwiseon1004@gmail.com</p>
+        
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+        <img src="img/pnc.png"  alt="5조사진" style="width:90%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="img/ssoi.png" alt="사진1" style="width:80%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h3>김소이<h3>
+            <p style="width: 20;">jjeomi653@gmail.com</p>
+        </div>
+      </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="img/hi.png" alt="사진" style="width:80%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <h3>김해인</h3>
+        <p>haein.kim.kr@gmail.com</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+        <img src="img/hjhj.png" alt="사진" style="width:80%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h3>김희지</h3>
+          <p>heezeo@gmail.com</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+        <img src="img/yb.png" alt="사진" style="width:80%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <h3>박유빈</h3>
+          <p>howhaveyubinpark@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <!-- 밑에 사진 + 설명  -->
+  <section>
+    <p><div class="w3-card-4 w3-margin w3-white">
+      <img src="img/wewe.jpg" alt="사진" style="width:100%">
+        <div class="w3-container">
+          <h3 style="text-align: center;"><b>GITHUB</b></h3>
+          <h5 style="text-align: center;">배틀그라운드연구소 <span class="w3-opacity">Daitgirls4</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p style="text-align: center;"> 우리가 사용한 모든 소스는 아래의 GITHUB버튼을 누르시면 바로 연결되어 보실 수 있습니다 
+          </p>
+          <div class="w3-row">
+            <!-- <div class="w3-col m8 s12"> -->
+              <div id="wrapp">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b><a href="https://github.com/dataitgirls4/team_5">우리의 GITHUB</a> »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+  </section>
+  <!-- 사진 설명 끝 section 안 여백  -->
+  
+
+
+
+      
+    
+          </section>
+          
+        
+        
+        
+
+    </body>
+    </html>
