@@ -1,3 +1,5 @@
+# chicken.dinner 라이브러리 사용하지 않고 가져올 때
+
 import requests
 import pandas as pd
 
