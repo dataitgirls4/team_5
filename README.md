@@ -13,14 +13,14 @@
 * 발표자료 : [웹사이트 ](https://dataitgirls4.github.io/team_5/index.html)
 * 🏆 2020 데잇걸즈 데모데이 한국정보화진흥원장상 수상 
 
-# 데이터 출처
+# Reference
 * [PUBG Developer Portal Open API](https://developer.pubg.com/)
 * [OPGG](https://pubg.op.gg/)
 * [Flynn / Chicken Dinner 패키지 ](https://chicken-dinner.readthedocs.io/en/latest/index.html)
 
 ---
 
-## 깃헙 업로드 규칙
+### 깃헙 업로드 규칙
 **업로드 시 주의사항**
 * 깃헙이 익숙하지 않다면 새로운 작업물은 직접 올리는 게 안전
 * 기존 작업물을 수정하는 경우, [pull_requests_manual.md](pull_requests_manual.md) 참고
