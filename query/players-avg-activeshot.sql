@@ -1,4 +1,3 @@
-USE pubg_esports;
 SELECT player_name, AVG(avg.activeshot)
 FROM
 (SELECT player_name, weapon_name, (real_attack_count/attack_count)*100 activeshot
