@@ -12,20 +12,20 @@
 <body bgcolor="black">
     <div class="topnav">
         	<a href="index.html">Lab</a>
-              <a href="intro.html">Intro</a>
+			  <a href="intro.html">Intro</a>
+			  <a href="page2.html">Shooting Skills</a>
+			  <a href="page3.html">Weapon Spawns</a>
               <a href="main.html">Analysis process</a>
-              <a href="page2.html">Weapon</a>
-              <a href="page3.html">Map</a>
               <a href="about.html">Members</a>
       </div>
 	<header class="header">
 		<div class="global-width">
 			<h1 class="page-title"><b>프로젝트 과정</b> </h1>
 			<p>
-				우리의 프로젝트에는 데잇걸즈 4기의 과정이 그대로 녹아있습니다. <br>&nbsp;&nbsp;&nbsp;&nbsp;<B>협업</B> 우리팀의 가치,<br>
+				우리의 프로젝트에는 데잇걸즈 4기의 과정이 그대로 녹아있습니다. <br>&nbsp;&nbsp;&nbsp;&nbsp;<B>협업</B> 이라는 우리 팀의 가치 위에서<br>
                 1. 서로 원하는 것과 원하지 않는 것을 솔직하고 투명하게 공유한다.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;2. 아낌없이 칭찬하고 기꺼이 받는다. 겸손하지 말자.<br>
-				3. 빨리 가는 소수에게 의지하지 않고, <b>"다같이 성장"</b>을 추구한다.<br>
+				3. 빨리 가는 소수에게 의지하지 않고, <b>"다같이 성장"</b>을 추구한다.<br><br>
 				지금부터,<br>
 				<h3>에란겔 무기 연구소의 데이터 분석 과정을 보여드리겠습니다.</h3>
 			</p>
@@ -33,55 +33,63 @@
 	</header>
 	<section class="scroll-content">
 		<div class="scroll-graphic">
-			<div class="graphic-item"><img class="scene-img" src="img/in11.PNG" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="img/in12.PNG" alt="데이터프레임사진"></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/1_데이터_추출.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/2_DB구축.png" alt="데이터프레임사진"></div>
 			<div class="graphic-item" data-action="birdFlies">
 				<img class="bird" src="images/bird.gif" alt="">
-				<img class="scene-img" src="img/in15.PNG" alt="">
+				<img class="scene-img" src="img/analysis/3_태블로.png" alt="">
 			</div>
-			<div class="graphic-item"><img class="scene-img" src="img/a2.PNG" alt="erd 사진"></div>
-			<div class="graphic-item"><img class="scene-img" src="img/grip.png" alt="datagrip사진"></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/4_웹페이지.PNG" alt="erd 사진"></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/5_SQL.png" alt="datagrip사진"></div>
 			<div class="graphic-item" data-action="birdFlies2">
 				<img class="bird" src="img/후라이팬.png" alt="뭐넣냐">
-				<img class="scene-img" src="img/a3.PNG" alt="">
+				<img class="scene-img" src="img/analysis/6_github.png" alt="">
 			</div>
-			<div class="graphic-item"><img class="scene-img" src="img/a4.PNG" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="img/git.png" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="img/a05.jpg" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="img/we2.jpg" alt="노션사진"></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/7_노션.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/10_과정.png" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/8_배움.jpg" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="img/analysis/9_fin.jpg" alt="노션사진"></div>
 		</div>
 		<div class="scroll-text global-width">
 			<div class="step">
 				<p>
-					배틀 그라운드는 한 매치가 끝나면 약 80만 줄 이상의 로그가 쌓이고, 개발자 포탈에 공개됩니다.<br>
-					 저희는 오픈 API 주소를 받아 필요한 데이터를 추출하고, 파이썬을 통해 데이터 프레임으로 가공하는 작업을 거쳤습니다.
+					<h3>1. 데이터 추출</h3>
+					배틀 그라운드는 한 매치가 끝나면 약 80만 줄 이상의 로그가 쌓이고,<br>
+					개발자 포탈에 공개됩니다.<br>
+					저희는 오픈 API 주소를 받아 필요한 데이터를 추출하고,<br>
+					파이썬을 통해 데이터 프레임으로 가공하는 작업을 거쳤습니다.
 				</p>
 			</div>
 			<div class="step">
 				<p>
-					또한 큰 데이터를 모두가 효율적으로 다루기 위해 데이터 프레임으로 가공된 데이터를 MySQL 서버에 임포트 했고,<br>
-					 IDE(통합 개발 환경)를 활용해 연구소의 최종 데이터 베이스를 완성했습니다.<br>
-					 분석을 위한 집계는 SQL을 사용했습니다. 원하는 데이터를 뽑기 위한 쿼리를 짜고, <Br>
+					<h3>2. DB 구축</h3>
+					또한 큰 데이터를 모두가 효율적으로 다루기 위해<br>
+					데이터 프레임으로 가공된 데이터를 MySQL 서버에 임포트 했고,<br>
+					IDE(통합 개발 환경)를 활용해 연구소의 최종 데이터 베이스를 완성했습니다.<br>
+					<h3>3. DB 활용 및 분석</h3>
+					분석을 위한 집계는 MySQL을 사용했습니다.<br>
+					원하는 데이터를 쿼리로 추출해 확인하며 분석에 활용했습니다.
 				</p>
 			</div>
 			<div class="step">
 				<p>
-					<h3>시각화</h3>
-					Plotly를 통한 간단한 시각화, 태블로를 통한 시각화 작업을 했습니다.
+					<h3>4. 분석 및 시각화</h3>
+					Plotly를 통해 EDA를 하고, 태블로를 활용해 최종 시각화 작업을 했습니다.
 				</p>
 			</div>
 			<div class="step">
 				<p>
-					<h3>웹페이지 구현</h3>
+					<h3>5. 웹페이지 구현</h3>
 					마지막으로 자바 스크립트를 활용해 만든 <br>인터렉티브 웹 페이지를 통해 분석 결과를 업로드하고, <Br>
-					태블로 대시보드를 넣어 선수별 사격 스킬을 바로 확인할 수 있도록 구현했습니다.
+					태블로 대시보드를 넣어 선수별 사격 스킬과<br>
+					무기 스폰 지역을 바로 확인할 수 있도록 구현했습니다.
 					
 				</p>
 			</div>
 			<div class="step">
 				<p>
                     <b><h3>본격적인 분석을 위해 데이터를 다루는 데 가장 유용했던 SQL</h3></b>
-                    데이터를 추출하고 가공하는 과정에서 판다스가 가장 많이 사용 되었다면, <br>
+                    데이터를 추출하고 가공하는 과정에서 판다스가 가장 많이 사용되었다면, <br>
                     데이터베이스를 구축한 뒤 분석을 위한 집계 등에는 <br>SQL이 가장 유용하게 사용되었습니다.
 
 
@@ -97,24 +105,27 @@
 			</div>
 			<div class="step">
 				<p>
-					스케줄링은 노션과 슬랙을 통해 공유하고 진행했습니다.
+					스케줄링은 노션과 슬랙을 통해 진행했습니다.
 					
 				</p>
 			</div>
 			<div class="step">
 				<p>
-					프로젝트를 진행하면서 가장 만족했던 부분은 데잇걸즈에서 배운 내용을 남김없이 <Br>
+					프로젝트를 진행하면서 가장 만족했던 부분은<br>
+					데잇걸즈에서 배운 내용을 남김없이 <Br>
 					프로젝트에 적용해볼 수 있었다는 점입니다.
 				</p>
 			</div>
 			<div class="step">
 				<p>
-					하나씩 복기하는 과정은 많은 배움을 주었습니다.
+					프로젝트의 전체 과정 속에서<br>
+					커리큘럼을 하나씩 복기하는 과정은 많은 배움을 주었습니다.
 				</p>
 			</div>
 			<div class="step">
 				<p>
-                    <b><h2>감사합니다. 에란겔 무기연구소 였습니다.</h2></b>
+                    <b><h2>감사합니다<br>
+						에란겔 무기연구소였습니다</h2></b>
 						
                    
 				</p>
