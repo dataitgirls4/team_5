@@ -1,4 +1,3 @@
-USE pubg_esports;
 SELECT player_name, ROUND(AVG(avg.damage_per_shot),2) avg_damage_per_shot
 FROM
 (SELECT player_name, weapon_name, (damage/real_attack_count)*100 damage_per_shot
