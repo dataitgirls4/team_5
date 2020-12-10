@@ -94,17 +94,3 @@ match_participant_all = pd.merge(match_participant_all, tournament_id, how = "le
 result = pd.merge(match_participant_all, match_info, on = 'match_id', how='left').drop_duplicates()
 
 result = result[['tournament_id', 'match_id', 'created_at', 'map_name', 'duration','team_rank', 'team_name', 'player_id', 'player_name', 'time_survived', 'death_type', 'kill_place', 'kills', 'dbnos', 'assists','damage_dealt', 'headshot_kills','longest_kill', 'road_kills', 'vehicle_destroys', 'weapons_acquired', 'boosts', 'heals', 'revives','ride_distance', 'swim_distance', 'walk_distance']].sort_values('created_at')
-
-import pymysql
-from sqlalchemy import create_engine
-pymysql.install_as_MySQLdb()
-import MySQLdb
-
-# DB 연결정보 넣기
-engine = create_engine("mysql+mysqldb://{User}:{Password}@{Host}:3306/{Database}}", encoding='utf-8')
-conn = engine.connect()
-
-tournament_id = result.loc[0, "tournament_id"]
-table_name = f"matches_{tournament_id}"
-
-result.to_sql(name=table_name, con=engine, if_exists='append', index=False)
