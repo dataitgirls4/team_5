@@ -8,6 +8,7 @@
 ### Index
 * database : 가공 후 DB에 넣은 테이블 목록
 * raw-data : ApI ~ 가공 사이의 데이터를 다룬 코드
+* query : tableau 시각화를 위해 추출에 사용된 쿼리와 추출 데이터 모음
 
 # Reference
 * [PUBG Developer Portal Open API](https://developer.pubg.com/)
