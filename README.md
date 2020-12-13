@@ -5,6 +5,10 @@
 * 발표자료 : [웹사이트](https://dataitgirls4.github.io/team_5/)
 * 🏆 2020 데잇걸즈 데모데이 한국정보화진흥원장상 수상 
 
+### Index
+* database : 가공 후 DB에 넣은 테이블 목록
+* raw-data : ApI ~ 가공 사이의 데이터를 다룬 코드
+
 # Reference
 * [PUBG Developer Portal Open API](https://developer.pubg.com/)
 * [OPGG](https://pubg.op.gg/)
