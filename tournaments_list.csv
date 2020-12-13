@@ -1,4 +1,4 @@
-﻿tournament_name,date,tournament_id,matches 수,players 수
+﻿tournament_name,date,tournament_id,matches_cnt,players_cnt
 PUBG CONTINENTAL SERIES 1 ASIA,20200600,as-pcs1as,20,67
 PUBG CONTINENTAL SERIES 1 ASIA KR,20200500,as-pcs1kr,56,205
 PUBG CONTINENTAL SERIES 2 ASIA,20200800,as-pcs2as,24,66
