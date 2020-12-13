@@ -1,11 +1,3 @@
-# Team
-### 에란겔 무기 연구소
-* 김귀선 kwiseon1004@gmail.com
-* 김소이 jjeomi653@gmail.com
-* 김해인 Haein.kim.kr@gmail.com
-* 김희지 heezeo@gmail.com
-* 박유빈 howhaveyoubinpark@gmail.com
-
 # Project
 ### 배틀그라운드 e스포츠 데이터 분석
 * 프로젝트 기간 : 2020.11.02 - 2020.12.05
@@ -17,6 +9,14 @@
 * [PUBG Developer Portal Open API](https://developer.pubg.com/)
 * [OPGG](https://pubg.op.gg/)
 * [Flynn / Chicken Dinner 패키지 ](https://chicken-dinner.readthedocs.io/en/latest/index.html)
+
+# Team
+### 에란겔 무기 연구소
+* 김귀선 kwiseon1004@gmail.com
+* 김소이 jjeomi653@gmail.com
+* 김해인 Haein.kim.kr@gmail.com
+* 김희지 heezeo@gmail.com
+* 박유빈 howhaveyoubinpark@gmail.com
 
 ---
 
